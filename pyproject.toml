@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fusionrs-clip"
+version = "1.0.0"
+description = "Shared-encoder RGB-infrared-style CLIP model for remote sensing"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "FusionRS Authors"}
+]
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.57,<6",
+  "Pillow>=10",
+  "safetensors>=0.4"
+]
+
+[project.scripts]
+fusionrs-infer = "fusionrs.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fusionrs*"]

@@ -1,0 +1,39 @@
+{
+  "fusionrs_test": {
+    "mean_recall": 67.4064,
+    "ir_to_original_caption_r1": 19.9707,
+    "original_caption_to_ir_r1": 20.3262,
+    "rgb_to_ir_r1": 88.2790,
+    "ir_to_rgb_r1": 89.5023
+  },
+  "caltech_aerial_rgb_thermal_zero_shot_pair_retrieval": {
+    "samples": 279,
+    "mean_recall": 66.9056,
+    "rgb_to_thermal_r1": 39.0681,
+    "thermal_to_rgb_r1": 39.0681
+  },
+  "real_sensor_downstream_three_adaptation_seeds": {
+    "seeds": [
+      42,
+      2026,
+      3407
+    ],
+    "hit_uav_map_50_95": {
+      "mean": 38.5997,
+      "sample_sd": 0.5658
+    },
+    "sirst_v2_iou": {
+      "mean": 65.6361,
+      "sample_sd": 0.4321
+    },
+    "irstd_1k_iou": {
+      "mean": 54.1439,
+      "sample_sd": 1.5450
+    },
+    "caltech_10pct_semantic_map": {
+      "mean": 89.8451,
+      "sample_sd": 3.5670
+    }
+  },
+  "claim_boundary": "Real-sensor transfer is task-specific, not universal."
+}

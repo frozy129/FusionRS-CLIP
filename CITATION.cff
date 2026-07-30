@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use FusionRS-CLIP, please cite the FusionRS paper."
+title: "FusionRS: A Large-Scale RGB-Infrared-Style Remote Sensing Dataset for Cross-Modal Vision-Language Learning"
+type: software
+version: 1.0.0
+date-released: 2026-07-25
+authors:
+  - given-names: Jiaju
+    family-names: Han
+  - given-names: Ben
+    family-names: Zhang
+  - given-names: Xuemeng
+    family-names: Sun
+  - given-names: Qike
+    family-names: Zhang
+  - given-names: Yuxian
+    family-names: Dong
+  - given-names: Chengyin
+    family-names: Hu
+  - given-names: Fengyu
+    family-names: Zhang
+  - given-names: Yiwei
+    family-names: Wei
+  - given-names: Jiujiang
+    family-names: Guo
+license: MIT
+

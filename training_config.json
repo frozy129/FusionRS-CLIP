@@ -1,0 +1,42 @@
+{
+  "release": "FusionRS-CLIP-v1.0.0-rc4",
+  "architecture": "CLIP ViT-B/32",
+  "base_model": "openai/clip-vit-base-patch32",
+  "shared_image_encoder": true,
+  "paired_input_fusion": false,
+  "projection_dim": 512,
+  "parameters": 151277313,
+  "training_rows_manifest": 580000,
+  "training_rows_used": 579992,
+  "filtered_empty_captions": 8,
+  "validation_rows": 10000,
+  "test_rows": 10000,
+  "ir_view": "translated infrared-style",
+  "loss": {
+    "components": [
+      "rgb_text",
+      "ir_text",
+      "rgb_ir"
+    ],
+    "rgb_ir_weight": 1.0,
+    "formula": "(rgb_text + ir_text + rgb_ir) / 3"
+  },
+  "epochs": 3,
+  "optimizer_steps": 13593,
+  "batch_size": 128,
+  "validation_batch_size": 128,
+  "learning_rate": 0.000005,
+  "weight_decay": 0.1,
+  "warmup_steps": 500,
+  "precision": "fp16",
+  "seed": 42,
+  "checkpoint_epoch": 3,
+  "checkpoint_step": 13593,
+  "validation_loss": 0.810417486425442,
+  "validation_components": {
+    "rgb_text": 0.8522116160845454,
+    "ir_text": 1.4821962999014915,
+    "rgb_ir": 0.0968444862792009
+  },
+  "source_checkpoint_sha256": "cc95259c25eed5ec1e9f3fe915eb17dc28f9acc730474203a34a38ba22d83b86"
+}
