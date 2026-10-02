@@ -1,0 +1,18 @@
+{
+  "eval_representatives": 19091,
+  "non_singleton_members": 84980,
+  "output": "fusionrs_dataset_index_v3_rc4_20260726.jsonl.gz",
+  "rows": 600000,
+  "source_counts": {
+    "NWPU": 31186,
+    "RS5M": 488033,
+    "RSICD": 10824,
+    "RSITMD": 4691,
+    "SkyScript": 65266
+  },
+  "split_counts": {
+    "test": 10000,
+    "train": 580000,
+    "val": 10000
+  }
+}

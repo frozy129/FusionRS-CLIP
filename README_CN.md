@@ -1,15 +1,11 @@
 # FusionRS-CLIP 使用说明
 
-FusionRS-CLIP 是基于 CLIP ViT-B/32 的共享编码器模型，在 579,992 个可用
+FusionRS-CLIP 是基于 CLIP ViT-B/32 的共享编码器模型，在 579,993 个有效
 RGB、translated infrared-style 和文本三元组上训练。RGB、IR 与文本映射到同一个
 512 维归一化特征空间。
 
 它满足 RGB/IR 双模态表示学习，但不是 RGB、IR 双分支网络，也不会在一次前向中
 融合成对输入。
-
-本仓库仅发布经过审计的 rc4 seed-42 模型及推理代码，不重新分发数据集图像或
-来源 caption。通过权利检查的公开元数据位于
-[FusionRS 主仓库](https://github.com/frozy129/FusionRS)。
 
 ## 安装
 

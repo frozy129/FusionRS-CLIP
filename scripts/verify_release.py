@@ -31,7 +31,12 @@ def main() -> None:
     actual_files = {
         path.relative_to(root).as_posix()
         for path in root.rglob("*")
-        if path.is_file() and ".git" not in path.relative_to(root).parts
+        if (
+            path.is_file()
+            and ".git" not in path.relative_to(root).parts
+            and "__pycache__" not in path.relative_to(root).parts
+            and path.suffix != ".pyc"
+        )
     }
     for relative in sorted(actual_files - expected_files):
         errors.append(f"unexpected: {relative}")

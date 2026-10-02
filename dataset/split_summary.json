@@ -1,0 +1,209 @@
+{
+  "dry_run": false,
+  "policy": "rgb_ir_phash64_radius4_caption_balanced_group_split",
+  "source_manifest": "/root/autodl-fs/clip_580k_retrain_20260523/data/sample_id_split_manifest.jsonl",
+  "near_clusters": [
+    "/root/autodl-tmp/kdd_dedup_audit_20260722/near_phash_clusters.jsonl.gz",
+    "/root/autodl-tmp/kdd_joint_split_rc3_20260726_ir_audit/ir_near_phash_clusters.jsonl.gz"
+  ],
+  "output_dir": "/root/autodl-tmp/kdd_joint_split_rc4_20260726",
+  "rows": 600000,
+  "targets": {
+    "train": 580000,
+    "val": 10000,
+    "test": 10000
+  },
+  "counts": {
+    "train": 580000,
+    "val": 10000,
+    "test": 10000
+  },
+  "source_minimums_per_heldout_split": {
+    "NWPU": 500,
+    "RS5M": 500,
+    "RSICD": 500,
+    "RSITMD": 500,
+    "SkyScript": 500
+  },
+  "source_counts": {
+    "NWPU": {
+      "train": 30094,
+      "val": 556,
+      "test": 536
+    },
+    "RS5M": {
+      "train": 472682,
+      "val": 7670,
+      "test": 7681
+    },
+    "RSICD": {
+      "train": 9383,
+      "val": 716,
+      "test": 725
+    },
+    "RSITMD": {
+      "train": 3691,
+      "val": 500,
+      "test": 500
+    },
+    "SkyScript": {
+      "train": 64150,
+      "val": 558,
+      "test": 558
+    }
+  },
+  "movement_matrix": {
+    "train": {
+      "train": 573281,
+      "val": 3375,
+      "test": 3344
+    },
+    "val": {
+      "train": 3403,
+      "val": 6584,
+      "test": 13
+    },
+    "test": {
+      "train": 3316,
+      "val": 41,
+      "test": 6643
+    }
+  },
+  "movement_matrix_by_source": {
+    "NWPU": {
+      "train": {
+        "train": 29412,
+        "val": 347,
+        "test": 363
+      },
+      "val": {
+        "train": 341,
+        "val": 208,
+        "test": 0
+      },
+      "test": {
+        "train": 341,
+        "val": 1,
+        "test": 173
+      }
+    },
+    "RS5M": {
+      "train": {
+        "train": 468606,
+        "val": 1566,
+        "test": 1557
+      },
+      "val": {
+        "train": 2082,
+        "val": 6084,
+        "test": 0
+      },
+      "test": {
+        "train": 1994,
+        "val": 20,
+        "test": 6124
+      }
+    },
+    "RSICD": {
+      "train": {
+        "train": 9200,
+        "val": 645,
+        "test": 649
+      },
+      "val": {
+        "train": 93,
+        "val": 64,
+        "test": 9
+      },
+      "test": {
+        "train": 90,
+        "val": 7,
+        "test": 67
+      }
+    },
+    "RSITMD": {
+      "train": {
+        "train": 3572,
+        "val": 471,
+        "test": 478
+      },
+      "val": {
+        "train": 62,
+        "val": 17,
+        "test": 4
+      },
+      "test": {
+        "train": 57,
+        "val": 12,
+        "test": 18
+      }
+    },
+    "SkyScript": {
+      "train": {
+        "train": 62491,
+        "val": 346,
+        "test": 297
+      },
+      "val": {
+        "train": 825,
+        "val": 211,
+        "test": 0
+      },
+      "test": {
+        "train": 834,
+        "val": 1,
+        "test": 261
+      }
+    }
+  },
+  "clusters": {
+    "total": 440623,
+    "singletons": 391032,
+    "multi_sample": 49591,
+    "cross_split_after": 0
+  },
+  "grouping": {
+    "image_cluster_files": [
+      {
+        "path": "/root/autodl-tmp/kdd_dedup_audit_20260722/near_phash_clusters.jsonl.gz",
+        "clusters": 34160,
+        "members": 84375
+      },
+      {
+        "path": "/root/autodl-tmp/kdd_joint_split_rc3_20260726_ir_audit/ir_near_phash_clusters.jsonl.gz",
+        "clusters": 14338,
+        "members": 34268
+      }
+    ],
+    "image_clusters_listed": 48498,
+    "image_cluster_members": 118643,
+    "image_unions": 50684,
+    "joint_image_components": 549316,
+    "caption_grouping_enabled": true,
+    "caption_rows": 599992,
+    "caption_unique_keys": 477966,
+    "caption_duplicate_keys": 29158,
+    "caption_unions": 108693,
+    "joint_components": 440623
+  },
+  "caption_keys_cross_split_after": 0,
+  "protected": {
+    "clusters_forced_train": 47628,
+    "rows_in_protected_clusters": 142322,
+    "rows_flagged_VLM_train_used": 48616,
+    "rows_flagged_prior_reused_protected": 54487
+  },
+  "unique_heldout": {
+    "val": {
+      "triplets": 9538,
+      "pairs": 19076,
+      "image_component_triplets": 9561
+    },
+    "test": {
+      "triplets": 9553,
+      "pairs": 19106,
+      "image_component_triplets": 9563
+    }
+  },
+  "rule": "RGB and infrared-style radius-4 pHash components and normalized-caption groups are merged before assignment. VLM_train_used/prior_reused_protected joint components are forced to train. Heldout source minima are satisfied first; remaining capacity is filled deterministically with whole clusters, preferring original ownership, single-source clusters, and small clusters."
+}

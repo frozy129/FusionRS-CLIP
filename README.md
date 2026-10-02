@@ -13,7 +13,7 @@ tags:
 
 # FusionRS-CLIP
 
-FusionRS-CLIP is a shared-encoder CLIP ViT-B/32 model trained on 579,992 usable
+FusionRS-CLIP is a shared-encoder CLIP ViT-B/32 model trained on 579,993 valid
 RGB, translated infrared-style, and caption triplets from FusionRS. It aligns
 RGB images, infrared-style images, and text in a 512-dimensional embedding
 space.
@@ -21,11 +21,6 @@ space.
 This is dual-modality representation learning with one shared image encoder.
 It is not a two-tower RGB/IR model and does not fuse paired RGB and IR images
 inside a single forward pass.
-
-This repository releases the audited rc4 seed-42 model and its inference
-package. Dataset imagery and source captions are not redistributed here; the
-rights-cleared metadata release is available from the
-[FusionRS repository](https://github.com/frozy129/FusionRS).
 
 ## Install
 

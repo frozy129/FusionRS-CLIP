@@ -1,0 +1,37 @@
+{
+  "outputs": {
+    "accepted_v3": {
+      "rows": 45913,
+      "sha256": "6017e681db7ed9fba75791e10569248c5d05c0c9a937cba8a86fbf0d5acb54a3",
+      "source_counts": {
+        "NWPU": 2014,
+        "RS5M": 38411,
+        "RSICD": 642,
+        "RSITMD": 253,
+        "SkyScript": 4593
+      }
+    },
+    "removed_v2": {
+      "rows": 2659,
+      "sha256": "3b5795e62494d607eeb7fd75adf5d8e5fecb65284e0c388d51761d803b06d6cd",
+      "source_counts": {
+        "NWPU": 173,
+        "RS5M": 2131,
+        "RSICD": 68,
+        "RSITMD": 22,
+        "SkyScript": 265
+      }
+    },
+    "removed_v3_additional": {
+      "rows": 44,
+      "sha256": "287b0e1429cd50dcaf87b4283104a1d696d20b8c68d3d13f0efd7943dce4efe5",
+      "source_counts": {
+        "NWPU": 3,
+        "RS5M": 38,
+        "RSICD": 1,
+        "RSITMD": 1,
+        "SkyScript": 1
+      }
+    }
+  }
+}
